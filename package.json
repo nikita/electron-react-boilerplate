@@ -1,17 +1,24 @@
 {
-  "name": "one-click",
+  "name": "electron-react-boilerplate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "electron-is-dev": "^1.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
+  "devDependencies": {
+    "electron": "^5.0.5",
+    "wait-on": "^3.2.0"
+  },
+  "main": "src/electron.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +34,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "./"
 }
